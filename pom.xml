@@ -72,7 +72,7 @@
 				<version>${liquibase.version}</version>
 				<configuration>
 					<changeLogFile>${project.basedir}/src/main/resources/db/master.xml</changeLogFile>
-					<diffChangeLogFile>${project.basedir}/src/main/resources/db/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
+					<diffChangeLogFile>${project.build.directory}/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
 
 					<driver>org.h2.Driver</driver>
 					<url>jdbc:h2:file:${project.build.directory}/h2db/tmp/diff</url>
